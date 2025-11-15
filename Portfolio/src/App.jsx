@@ -1,4 +1,4 @@
-import Portfolio from "./components/portfolio.jsx";
+import Portfolio from "./components/project.jsx";
 
 
 function App() {
