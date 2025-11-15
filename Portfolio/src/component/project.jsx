@@ -1,6 +1,6 @@
 
 
-import "./project.css"
+import "./index.css"
 
 
 function Projects(props) {
