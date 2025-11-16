@@ -1,4 +1,5 @@
-import Projects from "..src/component/project.jsx";
+import Projects from "./component/project.jsx";
+
 
 import productlyImg from "./assets/image1.png";
 import genesisImg from "./assets/image2.png";
