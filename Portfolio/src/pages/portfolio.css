@@ -1,0 +1,19 @@
+.preview-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.preview-btn:hover {
+  background: #0056c1;
+  transform: translateY(-2px);
+}
