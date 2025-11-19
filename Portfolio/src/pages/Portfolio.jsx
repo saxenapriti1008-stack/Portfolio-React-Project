@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Projects from "../component/project.jsx";
+import Popup from "../component/popup.jsx";
 import "./portfolio.css";
 
 import productlyImg from "../assets/image1.png";
