@@ -1,0 +1,36 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.popup-image {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.popup-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
