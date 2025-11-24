@@ -4,17 +4,41 @@ import Popup from "../component/popup.jsx";
 import "./portfolio.css";
 
 function Portfolio() {
+  const [showProjects, setShowProjects] = useState(false);
+  const [search, setSearch] = useState("");
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <div className="portfolio-page">
-      <h1>My Projects</h1>
 
-      <Projects onSelect={(p) => setSelectedProject(p)} />
+      <button onClick={() => setShowProjects(!showProjects)}>
+        {showProjects ? "Hide Projects" : "Show Projects"}
+      </button>
 
-      <Popup project={selectedProject} onClose={() => setSelectedProject(null)} />
+      {showProjects && (
+        <>
+          {/* Search bar */}
+          <input
+            type="text"
+            placeholder="Search projects..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="search-bar"
+          />
+
+          {/* Pass search + onSelect */}
+          <Projects search={search} onSelect={setSelectedProject} />
+        </>
+      )}
+
+      {/* Popup */}
+      {selectedProject && (
+        <Popup project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </div>
   );
 }
+
+    
 
 export default Portfolio;
