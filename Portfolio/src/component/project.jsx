@@ -6,7 +6,7 @@ import image3 from "../assets/image3.png";
 
 import "./project.css";
 
-function Projects({ onSelect }) {
+function Projects({ search, onSelect }) {
   const projectList = [
     {
       id: 1,
@@ -37,9 +37,25 @@ function Projects({ onSelect }) {
 
   ];
 
+  //  FILTER using filter() + some()
+  
+  const filteredProjects = projectList.filter((project) => {
+    const text = search.toLowerCase();
+
+    return [
+      project.name,
+      project.tech,
+      project.description,
+    ].some((field) => field.toLowerCase().includes(text));
+  });
+
   return (
     <div className="project-container">
-      {projectList.map((project) => (
+      {filteredProjects.length === 0 && (
+        <p style={{ color: "gray" }}>No projects found.</p>
+      )}
+
+      {filteredProjects.map((project) => (
         <div
           key={project.id}
           className="project-card"
